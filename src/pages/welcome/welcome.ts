@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import {IonicPage, NavController, NavParams, ViewController} from 'ionic-angular';
+import {Component} from '@angular/core';
+import {NavController, ViewController} from 'ionic-angular';
 
 /**
  * Generated class for the WelcomePage page.
@@ -36,7 +36,7 @@ export class WelcomePage {
     }
   ];
 
-  closeModal(){
+  closeModal() {
     this.viewCtrl.dismiss();
   }
 
