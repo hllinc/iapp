@@ -7,14 +7,26 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>login</ion-title>
+    <ion-title>登录</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-  这里是登录页面
-  <button ion-button block color="danger" (click)="showAlert()">Alert</button>
-  <button ion-button block color="secondary" (click)="presentLoading()">登录</button>
+  <ion-list>
+
+    <ion-item>
+      <ion-label floating>用户名</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>密码</ion-label>
+      <ion-input type="password"></ion-input>
+    </ion-item>
+    <div padding>
+      <button ion-button block color="secondary" (click)="presentLoading()">登录</button>
+    </div>
+  </ion-list>
 </ion-content>

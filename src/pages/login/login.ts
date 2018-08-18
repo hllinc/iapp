@@ -29,13 +29,4 @@ export class LoginPage {
     loader.present();
   }
 
-  showAlert() {
-    const alert = this.alertCtrl.create({
-      title: 'Hello, kid!',
-      subTitle: 'Kid kid kid kid!!!!!!',
-      buttons: ['OK']
-    });
-    alert.present();
-  }
-
 }
