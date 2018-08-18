@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {NavController, ViewController} from 'ionic-angular';
+import {Storage} from '@ionic/storage';
 
 /**
  * Generated class for the WelcomePage page.
@@ -14,7 +15,7 @@ import {NavController, ViewController} from 'ionic-angular';
 })
 export class WelcomePage {
 
-  constructor(public navCtrl: NavController, public viewCtrl: ViewController) {
+  constructor(public navCtrl: NavController, public viewCtrl: ViewController, public storage: Storage) {
 
   }
 
@@ -37,6 +38,7 @@ export class WelcomePage {
   ];
 
   closeModal() {
+    this.storage.set("hasReadWelcomePage", true);
     this.viewCtrl.dismiss();
   }
 
