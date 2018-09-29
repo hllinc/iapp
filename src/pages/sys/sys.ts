@@ -23,13 +23,32 @@ export class SysPage {
   }
 
   clearStorage(){
-    this.storage.clear();
-    const alert = this.alertCtrl.create({
-      title: '你好',
-      subTitle: '本地存储已清空！',
-      buttons: ['关闭']
+    let conform = this.alertCtrl.create({
+      title: '确定清空本地存储吗？',
+      message: '点击确定按钮本地存储将被清空。',
+      buttons: [
+        {
+          text: '取消',
+          role: 'cancel',
+          handler: () => {
+            console.log('Cancel clicked');
+          }
+        },
+        {
+          text: '确定',
+          handler: () => {
+            this.storage.clear();
+            const alert = this.alertCtrl.create({
+              title: '你好',
+              subTitle: '本地存储已清空！',
+              buttons: ['关闭']
+            });
+            alert.present();
+          }
+        }
+      ]
     });
-    alert.present();
+    conform.present();
   }
 
 }
