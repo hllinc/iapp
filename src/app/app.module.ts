@@ -15,6 +15,7 @@ import {IonicStorageModule} from '@ionic/storage';
 import {LoginPage} from '../pages/login/login';
 import {RegisterPage} from '../pages/register/register';
 import {SysPage} from '../pages/sys/sys';
+import {DetailPageModule} from "../pages/detail/detail.module";
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import {SysPage} from '../pages/sys/sys';
     IonicStorageModule.forRoot({
       name: '__mydb',
       driverOrder: ['indexeddb', 'sqlite', 'websql']
-    })
+    }),
+    DetailPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

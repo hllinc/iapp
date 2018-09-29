@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import {LoadingController, NavController, NavParams} from 'ionic-angular';
+import {LoginPage} from "../login/login";
 
 /**
  * Generated class for the RegisterPage page.
@@ -14,11 +15,26 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class RegisterPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad RegisterPage');
+  }
+
+  presentLoading() {
+    const loader = this.loadingCtrl.create({
+      content: "请稍候...",
+      duration: 3000
+    });
+    loader.onDidDismiss(()=>{
+      this.navCtrl.popTo(LoginPage);
+    });
+    loader.present();
+  }
+
+  toLogin(){
+    this.navCtrl.push(LoginPage);
   }
 
 }
