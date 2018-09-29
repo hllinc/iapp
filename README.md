@@ -1,5 +1,6 @@
 # iapp 
 iapp is a Ionic's components example project for now, and will be updated at irregular intervals.
+To build Android, IOS and Windows app in just single project.
 ## Key Topics
 `Ionic` `Angular` `Webapp` `TypeScript` `SCSS` `NodeJS`
 ## Key Commands
