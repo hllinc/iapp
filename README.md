@@ -17,3 +17,4 @@ To build Android, IOS and Windows app in just single project.
 - ionic cordova run ios --device
 ### Manage Plugins
 - ionic cordova plugin add cordova-sqlite-storage
+- ionic cordova plugin add cordova-plugin-camera

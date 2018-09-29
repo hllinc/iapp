@@ -16,6 +16,8 @@ import {LoginPage} from '../pages/login/login';
 import {RegisterPage} from '../pages/register/register';
 import {SysPage} from '../pages/sys/sys';
 import {DetailPageModule} from "../pages/detail/detail.module";
+import {CameraPage} from "../pages/camera/camera";
+import {Camera} from "@ionic-native/camera";
 
 @NgModule({
   declarations: [
@@ -27,7 +29,8 @@ import {DetailPageModule} from "../pages/detail/detail.module";
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    CameraPage
   ],
   imports: [
     BrowserModule,
@@ -48,12 +51,14 @@ import {DetailPageModule} from "../pages/detail/detail.module";
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    CameraPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    Camera
   ]
 })
 export class AppModule {
