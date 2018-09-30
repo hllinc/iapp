@@ -18,6 +18,7 @@ import {SysPage} from '../pages/sys/sys';
 import {DetailPageModule} from "../pages/detail/detail.module";
 import {CameraPage} from "../pages/camera/camera";
 import {Camera} from "@ionic-native/camera";
+import {MapPageModule} from "../pages/map/map.module";
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import {Camera} from "@ionic-native/camera";
       name: '__mydb',
       driverOrder: ['indexeddb', 'sqlite', 'websql']
     }),
-    DetailPageModule
+    DetailPageModule,
+    MapPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

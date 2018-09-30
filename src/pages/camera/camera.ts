@@ -23,6 +23,7 @@ export class CameraPage {
   }
 
   openCamera(){
+    console.log("打开摄像头");
     const options: CameraOptions = {
       quality: 100,
       destinationType: this.camera.DestinationType.FILE_URI,

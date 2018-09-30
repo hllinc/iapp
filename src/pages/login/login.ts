@@ -1,7 +1,6 @@
 import {Component} from '@angular/core';
 import {AlertController, LoadingController, NavController, NavParams} from 'ionic-angular';
 import {RegisterPage} from "../register/register";
-import {HomePage} from "../home/home";
 
 /**
  * Generated class for the LoginPage page.
