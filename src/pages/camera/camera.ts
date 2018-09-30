@@ -14,12 +14,19 @@ import {Camera, CameraOptions} from "@ionic-native/camera";
   templateUrl: 'camera.html',
 })
 export class CameraPage {
+  strUrl:string;
+  medio:HTMLElement;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private camera: Camera) {
+    this.strUrl = 'http://ivi.bupt.edu.cn/hls/cctv5phd.m3u8';
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CameraPage');
+  }
+  ionViewDidEnter(){
+    this.medio = document.getElementById("vidioID");
+    //在这里就可以添加相应的代码对medio进行控制了
   }
 
   openCamera(){
