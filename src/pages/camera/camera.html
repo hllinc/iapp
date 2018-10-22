@@ -14,9 +14,17 @@
 
 
 <ion-content>
+  <ion-fab right bottom>
+    <button ion-fab color="vibrant"><ion-icon name="arrow-dropleft"></ion-icon></button>
+    <ion-fab-list side="left">
+      <button ion-fab (click)="openCamera()"><ion-icon name="ios-camera"></ion-icon></button>
+      <button ion-fab><ion-icon name="logo-twitter"></ion-icon></button>
+      <button ion-fab><ion-icon name="logo-vimeo"></ion-icon></button>
+      <button ion-fab><ion-icon name="logo-googleplus"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
   <video id="vidioID" preload="auto" autoplay="autoplay">
     <source [src]="strUrl" type="video/mp4"/>
   </video>
-  <button ion-button block (click)="openCamera()">打开摄像头</button>
   <img [src]="base64Image" *ngIf="base64Image" />
 </ion-content>
