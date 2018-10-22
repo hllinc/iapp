@@ -7,7 +7,8 @@ To build Android, IOS and Windows app in just single project.
 ### Add platform
 - ionic cordova platform add android
 - ionic cordova pilatform add ios
-### To run or build your app for production, run
+### To run or build your app for production
+- ionic cordova prepare ios
 - ionic cordova run android --prod --release
 - ionic cordova run ios --prod --release
 - ionic cordova build android --prod --release
