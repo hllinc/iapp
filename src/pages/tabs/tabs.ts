@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 
-import { AboutPage } from '../about/about';
-import { ContactPage } from '../contact/contact';
-import { HomePage } from '../home/home';
-import {CameraPage} from "../camera/camera";
+import { CommunityPage } from '../community/community';
+import { MyPage } from '../my/my';
+import { RecordPlayPage } from '../recordPlay/recordPlay';
+import {LiveBroadcastPage} from "../liveBroadcast/liveBroadcast";
 import {MapPage} from "../map/map";
 
 @Component({
@@ -11,11 +11,11 @@ import {MapPage} from "../map/map";
 })
 export class TabsPage {
 
-  tab1Root = HomePage;
-  tab2Root = AboutPage;
-  tab3Root = CameraPage;
+  recordPlayTab = RecordPlayPage; // 录播
+  communityTab = CommunityPage; // 社圈
+  liveBroadcastTab = LiveBroadcastPage; // 直播
   tab4Root = MapPage;
-  tab5Root = ContactPage;
+  myTab = MyPage; // 我的
 
   constructor() {
 

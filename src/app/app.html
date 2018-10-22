@@ -18,4 +18,15 @@
     </ion-list>
   </ion-content>
 </ion-menu>
+<ion-fab right middle>
+  <button ion-fab mini color="vibrant"><ion-icon name="arrow-dropleft"></ion-icon></button>
+  <ion-fab-list side="left">
+    <button ion-fab (click)="openCamera()"><ion-icon name="ios-camera"></ion-icon></button>
+    <button ion-fab><ion-icon name="md-text"></ion-icon></button>
+    <button ion-fab><ion-icon name="ios-image"></ion-icon></button>
+    <button ion-fab><ion-icon name="ios-videocam"></ion-icon></button>
+    <button ion-fab><ion-icon name="md-clock"></ion-icon></button>
+    <button ion-fab><ion-icon name="logo-usd"></ion-icon></button>
+  </ion-fab-list>
+</ion-fab>
 <ion-nav id="nav" #content [root]="rootPage"></ion-nav>

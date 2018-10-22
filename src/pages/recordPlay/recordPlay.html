@@ -1,13 +1,11 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>主页</ion-title>
-    <button ion-button menuToggle right>
-      <ion-icon name='menu'></ion-icon>
-    </button>
+    <ion-title>录播</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
+  <ion-searchbar></ion-searchbar>
   <ion-list>
     <ion-item *ngFor="let item of items" (click)="viewDetail(item)">
       <ion-thumbnail item-start>
@@ -15,7 +13,7 @@
       </ion-thumbnail>
       <h2>{{item.title}}</h2>
       <h3>{{item.info}}</h3>
-      <p>Listen, I've had a pretty messed up day...</p>
+      <p>{{item.detail}}</p>
     </ion-item>
   </ion-list>
   <ion-infinite-scroll (ionInfinite)="doInfinite($event)">

@@ -7,16 +7,16 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Detail</ion-title>
+    <ion-title>{{item.title}}</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-  <h2>详细页面</h2>
-  <p>id:{{item.id}}</p>
-  <p>title:{{item.title}}</p>
-  <p>info:{{item.info}}</p>
+  <!--<p>编号:{{item.id}}</p>-->
+  <p>标题:{{item.title}}</p>
+  <p>简介:{{item.info}}</p>
   <p><img [src]="item.src" alt=""></p>
+  <p>详情:{{item.detail}}</p>
 </ion-content>
