@@ -1,6 +1,5 @@
 import {Component, ElementRef, ViewChild} from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import {TestPage} from "./pages/test/test";
 
 /**
  * Generated class for the MapPage page.
@@ -43,7 +42,7 @@ export class MapPage {
   }
 
   openTest(){
-    this.navCtrl.push(TestPage);
+    // this.navCtrl.push(TestPage);
   }
 
 }

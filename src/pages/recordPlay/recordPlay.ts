@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
-import {App, ModalController, NavController, ViewController} from 'ionic-angular';
-import {DetailPage} from "../detail/detail";
+import {App, IonicPage, ModalController, NavController, ViewController} from 'ionic-angular';
 
+@IonicPage()
 @Component({
   selector: 'page-recordPlay',
   templateUrl: 'recordPlay.html'
@@ -9,7 +9,11 @@ import {DetailPage} from "../detail/detail";
 export class RecordPlayPage {
   items: any = [];
 
-  constructor(public navCtrl: NavController, public modalCtrl: ModalController, public appCtrl: App, public viewCtrl: ViewController) {
+  constructor(
+    public navCtrl: NavController,
+    public modalCtrl: ModalController,
+    public appCtrl: App,
+    public viewCtrl: ViewController) {
     this.initData();
   }
 
@@ -26,7 +30,8 @@ export class RecordPlayPage {
   }
 
   viewDetail(item: any) {
-    this.appCtrl.getRootNav().push(DetailPage, {item: item});
+    this.navCtrl.push("DetailPage", {item: item});
+    // this.Auth.modalWidthData("DetailPage", {item: item});
   }
 
   doInfinite(infiniteScroll) {

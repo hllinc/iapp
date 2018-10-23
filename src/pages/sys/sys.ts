@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import {AlertController, NavController, NavParams} from 'ionic-angular';
+import {Component} from '@angular/core';
+import {AlertController, IonicPage, NavController, NavParams, ViewController} from 'ionic-angular';
 import {Storage} from '@ionic/storage';
 
 /**
@@ -9,20 +9,26 @@ import {Storage} from '@ionic/storage';
  * Ionic pages and navigation.
  */
 
+@IonicPage()
 @Component({
   selector: 'page-sys',
   templateUrl: 'sys.html',
 })
 export class SysPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public storage: Storage, public alertCtrl: AlertController) {
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    public storage: Storage,
+    public alertCtrl: AlertController,
+    public viewCtrl: ViewController) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SysPage');
   }
 
-  clearStorage(){
+  clearStorage() {
     let conform = this.alertCtrl.create({
       title: '确定清空本地存储吗？',
       message: '点击确定按钮本地存储将被清空。',
@@ -49,6 +55,10 @@ export class SysPage {
       ]
     });
     conform.present();
+  }
+
+  dismiss() {
+    this.viewCtrl.dismiss();
   }
 
 }

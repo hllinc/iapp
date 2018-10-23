@@ -3,64 +3,68 @@ import {BrowserModule} from '@angular/platform-browser';
 import {IonicApp, IonicModule, IonicErrorHandler} from 'ionic-angular';
 import {MyApp} from './app.component';
 
-import {CommunityPage} from '../pages/community/community';
-import {MyPage} from '../pages/my/my';
-import {RecordPlayPage} from '../pages/recordPlay/recordPlay';
-import {TabsPage} from '../pages/tabs/tabs';
-
 import {StatusBar} from '@ionic-native/status-bar';
 import {SplashScreen} from '@ionic-native/splash-screen';
-import {WelcomePage} from '../pages/welcome/welcome';
 import {IonicStorageModule} from '@ionic/storage';
-import {LoginPage} from '../pages/login/login';
-import {RegisterPage} from '../pages/register/register';
-import {SysPage} from '../pages/sys/sys';
-import {DetailPageModule} from "../pages/detail/detail.module";
-import {LiveBroadcastPage} from "../pages/liveBroadcast/liveBroadcast";
 import {Camera} from "@ionic-native/camera";
-import {MapPageModule} from "../pages/map/map.module";
+import {UtilsProvider} from "../providers/utils";
+import {ComponentsModule} from "../components/components.module";
+import {AuthProvider} from "../providers/auth";
+import {HttpProvider} from "../providers/http";
+import {PopProvider} from "../providers/pop";
+import {LoggerProvider} from "../providers/logger";
+import {NativeProvider} from "../providers/native";
+import {PincodeInputModule} from "ionic2-pincode-input";
+import {HttpClientModule} from "@angular/common/http";
+import {ImagePicker} from "@ionic-native/image-picker";
+import {AppVersion} from "@ionic-native/app-version";
+import {GlobalDataProvider} from "../providers/globalData";
+import {File} from "@ionic-native/file";
+import {FileTransfer} from "@ionic-native/file-transfer";
+import {Network} from "@ionic-native/network";
 
 @NgModule({
   declarations: [
-    MyApp,
-    WelcomePage,
-    LoginPage,
-    RegisterPage,
-    SysPage,
-    CommunityPage,
-    MyPage,
-    RecordPlayPage,
-    TabsPage,
-    LiveBroadcastPage
+    MyApp
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp),
-    IonicStorageModule.forRoot({
-      name: '__mydb',
-      driverOrder: ['indexeddb', 'sqlite', 'websql']
+    ComponentsModule,
+    HttpClientModule,
+    PincodeInputModule,
+    // 配置项：tabsHideOnSubPages用于控制由主页面进入子页面是的底部导航的隐藏和现实
+    IonicModule.forRoot(MyApp, {
+      tabsHideOnSubPages: 'true',
+      backButtonText: '返回',
+      swipeBackEnabled: 'true',
+      mode: 'ios'
     }),
-    DetailPageModule,
-    MapPageModule
+    IonicStorageModule.forRoot({
+      name: 'myApp',
+      driverOrder: ['indexeddb', 'sqlite', 'websql']
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    MyApp,
-    WelcomePage,
-    LoginPage,
-    RegisterPage,
-    SysPage,
-    CommunityPage,
-    MyPage,
-    RecordPlayPage,
-    TabsPage,
-    LiveBroadcastPage
+    MyApp
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    Camera
+    Camera,
+    ImagePicker,
+    AppVersion,
+    File,
+    FileTransfer,
+    Network,
+    UtilsProvider,
+    AuthProvider,
+    HttpProvider,
+    PopProvider,
+    LoggerProvider,
+    GlobalDataProvider,
+    NativeProvider
   ]
 })
 export class AppModule {

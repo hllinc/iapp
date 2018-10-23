@@ -1,4 +1,4 @@
-<ion-menu side="right" [content]="content" id="sysMenu">
+<ion-menu side="right" [content]="content" id="sysMenu" class="toggle-menu" [swipeEnabled]="false">
   <ion-header>
     <ion-toolbar>
       <ion-title>菜单</ion-title>
@@ -6,13 +6,13 @@
   </ion-header>
   <ion-content>
     <ion-list>
-      <button ion-item (click)="openLoginPage()">
+      <button ion-item (click)="openLoginPage()" menuClose>
         登录
       </button>
-      <button ion-item (click)="openRegisterPage()">
+      <button ion-item (click)="openRegisterPage()" menuClose>
         注册
       </button>
-      <button ion-item (click)="openSysPage()">
+      <button ion-item (click)="openSysPage()" menuClose>
         其他功能
       </button>
     </ion-list>
@@ -30,4 +30,3 @@
   </ion-fab-list>
 </ion-fab>
 <ion-nav id="nav" #content [root]="rootPage"></ion-nav>
-<img [src]="base64Image" *ngIf="base64Image" />

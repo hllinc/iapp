@@ -1,4 +1,7 @@
-export class Util {
+import {Injectable} from "@angular/core";
+
+@Injectable()
+export class UtilsProvider {
 
   constructor() {
   }

@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {NavController, ViewController} from 'ionic-angular';
+import {IonicPage, NavController, ViewController} from 'ionic-angular';
 import {Storage} from '@ionic/storage';
 
 /**
@@ -9,6 +9,7 @@ import {Storage} from '@ionic/storage';
  * Ionic pages and navigation.
  */
 
+@IonicPage()
 @Component({
   selector: 'page-welcome',
   templateUrl: 'welcome.html',
