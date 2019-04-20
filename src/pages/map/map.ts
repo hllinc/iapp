@@ -23,6 +23,10 @@ export class MapPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
+  segmentChanged(ev: any) {
+    console.log('Segment changed', ev);
+  }
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad MapPage');
   }

@@ -8,10 +8,10 @@ import {IonicPage} from "ionic-angular";
 })
 export class TabsPage {
 
-  recordPlayTab = "RecordPlayPage"; // 录播
+  mapTab = "MapPage"; // 我要接单
+  orderTab = "OrderPage"; // 我的订单
   communityTab = "CommunityPage"; // 社圈
   liveBroadcastTab = "LiveBroadcastPage"; // 直播
-  tab4Root = "MapPage";
   myTab = "MyPage"; // 我的
 
   constructor() {

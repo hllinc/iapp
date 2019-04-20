@@ -1,12 +1,20 @@
-import {Component} from '@angular/core';
-import {App, IonicPage, ModalController, NavController, ViewController} from 'ionic-angular';
+import { Component } from '@angular/core';
+import {App, IonicPage, ModalController, NavController, NavParams, ViewController} from 'ionic-angular';
+
+/**
+ * Generated class for the OrderPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
 
 @IonicPage()
 @Component({
-  selector: 'page-recordPlay',
-  templateUrl: 'recordPlay.html'
+  selector: 'page-order',
+  templateUrl: 'order.html',
 })
-export class RecordPlayPage {
+export class OrderPage {
+
   items: any = [];
 
   constructor(
@@ -53,4 +61,5 @@ export class RecordPlayPage {
       infiniteScroll.complete();
     }, 500);
   }
+
 }
