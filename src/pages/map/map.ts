@@ -1,5 +1,5 @@
 import {Component, ElementRef, ViewChild} from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {IonicPage, NavController, NavParams} from 'ionic-angular';
 
 /**
  * Generated class for the MapPage page.
@@ -34,10 +34,11 @@ export class MapPage {
   ionViewDidEnter() {
     this.load();
   }
-  load(){
+
+  load() {
     this.map = new AMap.Map(this.map_container2.nativeElement, {
       view: new AMap.View2D({//创建地图二维视口
-        center:[116.388806,39.903936],
+        center: [116.388806, 39.903936],
         zoom: 10, //设置地图缩放级别
         rotateEnable: true,
         showBuildingBlock: true
@@ -45,7 +46,7 @@ export class MapPage {
     });
   }
 
-  openTest(){
+  openTest() {
     // this.navCtrl.push(TestPage);
   }
 
